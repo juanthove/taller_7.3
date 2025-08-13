@@ -21,6 +21,15 @@ document.getElementById("regBtn").addEventListener("click", function(){
         error = true;
     }
 
+
+const pass = document.getElementById('password1');
+const confirm = document.getElementById('password2');
+if (pass.value !== confirm.value) {
+    error = true;
+}
+ 
+    
+
     //Validacion minimo de caracteres en la contraseña
     let password1 = document.getElementById("password1").value;
     if (password1.length < 6) {
@@ -32,4 +41,5 @@ document.getElementById("regBtn").addEventListener("click", function(){
     }else{
         showAlertSuccess();
     }
+
 });
