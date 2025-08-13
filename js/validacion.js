@@ -7,5 +7,15 @@ function showAlertError() {
 }
 
 document.getElementById("regBtn").addEventListener("click", function(){
-    
+    const password1 = document.getElementById("password1").value;
+
+    if (validarPassword(password1)) {
+        showAlertSuccess();
+    } else {
+        showAlertError();
+    }
 });
+
+function validarPassword(password){
+    return password.length >=6;
+}
