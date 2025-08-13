@@ -21,6 +21,12 @@ document.getElementById("regBtn").addEventListener("click", function(){
         error = true;
     }
 
+    //Validacion minimo de caracteres en la contraseña
+    let password1 = document.getElementById("password1").value;
+    if (password1.length < 6) {
+        error = true;
+    }
+
     if(error){
         showAlertError();
     }else{
