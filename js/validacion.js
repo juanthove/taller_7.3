@@ -7,5 +7,18 @@ function showAlertError() {
 }
 
 document.getElementById("regBtn").addEventListener("click", function(){
-    
+    let error = false;
+    let campos = document.getElementsByClassName("form-control");
+    for(let i = 0; i<campos.length; i++){
+        if(campos[i].value.trim()==""){
+            error = true;
+        }
+    }
+
+
+    if(error){
+        showAlertError();
+    }else{
+        showAlertSuccess();
+    }
 });
