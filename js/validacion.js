@@ -21,9 +21,16 @@ document.getElementById("regBtn").addEventListener("click", function(){
         error = true;
     }
 
-    if(error){
-        showAlertError();
-    }else{
-        showAlertSuccess();
-    }
+
+const pass = document.getElementById('password1');
+const confirm = document.getElementById('password2');
+if (pass.value !== confirm.value) {
+    error = true;
+}
+if (error) {
+    showAlertError()
+} else {
+    showAlertSuccess()
+} 
+    
 });
