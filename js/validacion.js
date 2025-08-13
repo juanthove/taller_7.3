@@ -27,10 +27,19 @@ const confirm = document.getElementById('password2');
 if (pass.value !== confirm.value) {
     error = true;
 }
-if (error) {
-    showAlertError()
-} else {
-    showAlertSuccess()
-} 
+ 
     
+
+    //Validacion minimo de caracteres en la contraseña
+    let password1 = document.getElementById("password1").value;
+    if (password1.length < 6) {
+        error = true;
+    }
+
+    if(error){
+        showAlertError();
+    }else{
+        showAlertSuccess();
+    }
+
 });
