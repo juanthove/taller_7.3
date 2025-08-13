@@ -15,6 +15,11 @@ document.getElementById("regBtn").addEventListener("click", function(){
         }
     }
 
+     let terminos = document.getElementById("terminos")
+
+    if (!terminos.checked) {
+        error = true;
+    }
 
     if(error){
         showAlertError();
